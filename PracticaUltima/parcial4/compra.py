@@ -17,7 +17,7 @@ class Compra:
 
     @property
     def fecha_hora(self):
-        return f"{self.__fecha_hora.day} {self.__fecha_hora.month} {self.__fecha_hora.year}"
+        return f"{self.__fecha_hora.day} {self.__fecha_hora.month} {self.__fecha_hora.year} {self.__fecha_hora.hour}"
     
     @property
     def compra_facturada(self):
@@ -65,6 +65,10 @@ class Compra:
             self.__compra_facturada = True
         else:
             return f"La compra ya ha sido facturada."
+        
+
+    def __str__(self) -> str:
+        return f"{self.__cliente}"
         
 
 
